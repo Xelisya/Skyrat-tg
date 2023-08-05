@@ -3,19 +3,36 @@
 /obj/structure/foamedmetal,
 /obj/structure/window/spawner/directional/west,
 /turf/open/floor/holofloor/asteroid,
-/area/template_noop)
+/area/space)
 "b" = (
 /obj/structure/foamedmetal,
 /obj/structure/window/spawner/directional/east,
 /turf/open/floor/holofloor/asteroid,
-/area/template_noop)
+/area/space)
+"e" = (
+/obj/structure/table,
+/obj/machinery/recharger,
+/turf/open/floor/holofloor/asteroid,
+/area/space)
+"k" = (
+/obj/structure/foamedmetal,
+/turf,
+/area/space)
 "l" = (
 /turf/open/floor/holofloor/asteroid,
 /area/template_noop)
+"m" = (
+/turf/open/floor/holofloor/asteroid,
+/area/space)
+"n" = (
+/obj/structure/table,
+/obj/item/gun/energy/laser,
+/turf/open/floor/holofloor/asteroid,
+/area/space)
 "t" = (
 /obj/structure/foamedmetal,
 /turf/open/floor/holofloor/asteroid,
-/area/template_noop)
+/area/space)
 "u" = (
 /obj/structure/table,
 /obj/machinery/recharger,
@@ -27,13 +44,16 @@
 	heal_burn = 10
 	},
 /turf/open/floor/holofloor/asteroid,
-/area/template_noop)
+/area/space)
 "x" = (
 /obj/structure/foamedmetal,
 /obj/structure/window/spawner/directional/east,
 /obj/structure/bookcase/random/fiction,
 /turf/open/floor/holofloor/asteroid,
-/area/template_noop)
+/area/space)
+"H" = (
+/turf/open/space/basic,
+/area/space)
 "I" = (
 /obj/structure/table,
 /obj/item/gun/energy/laser,
@@ -46,7 +66,7 @@
 	},
 /obj/item/soap,
 /turf/open/floor/holofloor/asteroid,
-/area/template_noop)
+/area/space)
 
 (1,1,1) = {"
 a
@@ -73,9 +93,9 @@ b
 b
 "}
 (3,1,1) = {"
+k
 t
-t
-t
+k
 t
 t
 t
@@ -85,64 +105,64 @@ t
 t
 "}
 (4,1,1) = {"
-l
-l
-l
-l
-l
-l
-l
-l
-l
-l
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
 "}
 (5,1,1) = {"
-l
-l
-l
-l
-l
-l
-l
-l
-l
-l
+m
+m
+m
+H
+m
+m
+m
+m
+m
+m
 "}
 (6,1,1) = {"
+m
 l
-l
-l
-l
-l
-l
-l
-l
-l
-l
+m
+m
+m
+m
+m
+m
+m
+m
 "}
 (7,1,1) = {"
+m
 l
 l
 l
 l
-l
-l
-l
-l
-l
-l
+m
+m
+m
+m
+m
 "}
 (8,1,1) = {"
+m
 l
 l
 l
 l
-l
-l
-l
-l
-l
-l
+m
+m
+m
+m
+m
 "}
 (9,1,1) = {"
 v
@@ -151,8 +171,8 @@ I
 l
 I
 I
-l
-I
-u
+m
+n
+e
 J
 "}
