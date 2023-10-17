@@ -307,7 +307,7 @@
 	addtimer(CALLBACK(src, PROC_REF(send_message), "The echoing of cogs returns, even louder, "), (selected_research.time_to_research / 2), 90)
 
 /// Send a message to everyone on the Z level with directions to the lectern
-/obj/structure/destructible/clockwork/gear_base/technologists_lectern/proc/send_message(message = "You hear the echoing of cogs ", volume = 70)
+/obj/structure/destructible/clockwork/gear_base/technologists_lectern/proc/send_message(initial_message = "You hear the echoing of cogs ", volume = 70)
 	for(var/mob/living/living_mob as anything in GLOB.mob_living_list)
 		if((living_mob.z != z) || IS_CLOCK(living_mob) || !living_mob.can_hear())
 			continue
@@ -316,6 +316,7 @@
 		var/turf/mob_turf = get_turf(living_mob)
 		var/dist = get_dist(mob_turf, src)
 		var/dir = get_dir(mob_turf, src)
+		var/message = initial_message
 		switch(dist)
 			if (0 to 15)
 				message += "very nearby, to your [dir2text(dir)]!"
@@ -414,7 +415,7 @@
 			priority_announce("A fatal power outage has occurred. Please ensure that all on-board devices are connected to an appropriate power generator.")
 
 			apc_loop:
-				for(var/obj/machinery/power/apc/controller as anything in GLOB.apcs_list)
+				for(var/obj/machinery/power/apc/controller as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/power/apc))
 					var/area/apc_area = get_area(controller) // make sure that no "critical" APCs lose their power (SM, namely)
 					for(var/turf/turf as anything in apc_area.contained_turfs)
 						for(var/obj/machinery/depowered_machinery in turf)
@@ -423,7 +424,7 @@
 
 					controller.cell?.charge = 0
 
-			for(var/obj/machinery/power/smes/battery_pack in GLOB.machines)
+			for(var/obj/machinery/power/smes/battery_pack as anything in SSmachines.get_machines_by_type_and_subtypes(/obj/machinery/power/smes))
 				battery_pack.charge = 0
 
 			GLOB.max_clock_power += 1500 // Extra bonus
